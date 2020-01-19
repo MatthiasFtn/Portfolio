@@ -1,0 +1,780 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Jason Guestin, développeur web front-end/back-end passioné et étudiant en DUT Informatique. Voici mon portfolio réalisé from-scratch" />
+        <title>Jason Guestin - Portfolio</title>
+        <link rel="icon" href="logo.ico" />
+
+        <link rel="stylesheet" href="src/css/bulma.min.css">
+        <link rel="stylesheet" href="src/css/style2.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+              integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+              crossorigin=""/>
+
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+        <script src="src/js/lazysizes.min.js" async=""></script>
+    </head>
+    <body>
+        <!-- Pre-loader -->
+        <div class="preloader">
+            <div class="preloader-content">
+                <img src="src/img/Pulse-1s-200px.gif"> <br/>
+                <p>En cours de chargement</p>
+            </div>
+        </div>
+        <!-- Header -->
+        <div class="block" style="margin-bottom: 0px">
+            <header class="header is-hidden-touch">
+                <div class="columns is-mobile">
+                    <div class="column is-two-fifths header-menu" style="text-align: right">
+                        <a class="lien-about" href="#about">À PROPOS</a>
+                        <a class="lien-skills" href="#skills">COMPÉTENCES</a>
+                    </div>
+                    <div class="column">
+                        <a href="#" class="header-logo"><img src="src/img/logo.svg" alt="logo jason guestin"></a>
+                    </div>
+                    <div class="column is-two-fifths header-menu" style="text-align: left">
+                        <a class="lien-projet" href="#projects">PROJETS</a>
+                        <a class="lien-contact" href="#contact">CONTACT</a>
+                        <div class="dropdown is-active">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Langage </span>
+                                    <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu is-hidden" id="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-item is-active">
+                                        FR
+                                    </a>
+                                    <a href="english.html" class="dropdown-item">
+                                        EN
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </header>
+
+            <nav class="is-hidden-desktop">
+                <div class="columns is-mobile">
+                    <div class="column is-2">
+                        <div class="navbar-image">
+                            <a href="#"><img src="src/img/logo.svg" alt="logo jason guestin"></a>
+                        </div>
+                    </div>
+                    <div class="column text">
+                        <a class="lien-about" href="#about">À PROPOS</a>
+                    </div>
+                    <div class="column text">
+                        <a class="lien-skills" href="#skills">COMPÉTENCES</a>
+                    </div>
+                    <div class="column text">
+                        <a class="lien-projet" href="#projects">PROJETS</a>
+                    </div>
+                    <div class="column text">
+                        <a class="lien-contact" href="#contact">CONTACT</a>
+                    </div>
+                </div>
+                <div class="burger">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="burger-on">
+                    <div>
+                        <a class="lien-about" href="#about">À PROPOS</a>
+                    </div>
+                    <div>
+                        <a class="lien-skills" href="#skills">COMPÉTENCES</a>
+                    </div>
+                    <div>
+                        <a class="lien-projet" href="#projects">PROJETS</a>
+                    </div>
+                    <div>
+                        <a class="lien-contact" href="#contact">CONTACT</a>
+                    </div>
+                    <div>
+                        <a href="english.html"><img src="src/img/anglais.jpg" alt="Drapeau anglais" /></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Banner -->
+        <div class="block" style="margin-bottom: 0px; width: 100vw; height: 100vh">
+            <div class="banner">
+                <div class="banner-image"></div>
+                <div class="banner-content">
+                    <div class="contenu">
+                        <h1 class="title is-1">Jason Guestin</h1>
+                        <h2 class="title is-2" id="twriter">	⠀</h2> <br />
+                        <a href="#about" class="button is-white is-medium">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Présentation  -->
+        <div class="block" style="margin-bottom: 0px">
+            <div class="presentation" id="about">
+                <div class="contenu">
+                    <img class="hidden" src="src/img/jason.png" alt="Jason Guestin 300px">
+                    <div class="columns is-mobile" style="width: 70%">
+                        <div class="column text1">Bonjour ! Je m'appelle Jason, étudiant actuellement en 2ème année de DUT Informatique, comment puis-je vous être utile ?</div>
+                        <div class="column text2">Je suis quelqu'un de curieux, passioné par le développement et le graphisme. Chaque projet a une importance capitale à mes yeux et
+                             est réalisé avec le maximum de sérieux et de méticulosité possible, pour assouvir ma propre satisfaction ainsi que, surtout, celle des personnes avec lesquelles je collabore.</div>
+                    </div>
+                </div>
+                <a href="#skills"><i class="far fa-caret-square-down fa-3x swipe"></i></a>
+            </div>
+        </div>
+
+        <!-- Compétences -->
+        <div class="block" style="margin-bottom: 0px">
+            <div class="skills" id="skills">
+                <div class="fond">
+                <div class="columns is-desktop" style="width: 80%; margin: auto; padding-top: 70px;">
+                    <div class="column" style="margin-bottom: 70px"><div class="hexagon" style="margin: auto;"><i class="fas fa-glasses fa-4x a-centrer" style="color: white;"></i></div><br /><br /><br /><h3 class="subtitle is-3"> Travail rigoureux </h3></div>
+                    <div class="column" style="margin-bottom: 70px"><div class="hexagon" style="margin: auto;"><i class="fas fa-ruler-combined fa-4x a-centrer" style="color: white;"></i> </div><br /><br /><br /><h3 class="subtitle is-3"> Adapté à vos besoins </h3></div>
+                    <div class="column" style="padding-bottom: 70px"><div class="hexagon" style="margin: auto;"><i class="far fa-heart fa-4x a-centrer" style="color: white;"></i> </div><br /><br /><br /><h3 class="subtitle is-3"> Codé avec amour </h3></div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block" style="margin-bottom: 0px; padding-bottom: 60px">
+            <div class="skills-2">
+                <h1 class="title is-2">COMPÉTENCES⠀<i class="fas fa-toolbox"></i></h1>
+                <div class="container">
+                    <div class="columns is-desktop">
+                        <div class="column columns is-mobile hidden" style="width: 85%; margin-left: auto; margin-right: auto">
+                            <div class="column is-one-quarter-desktop is-half-touch">
+                                <p> <i class="fas fa-code"></i>	HTML5/CSS3/JS </p>
+                                <p> <i class="fab fa-php"></i>	⠀PHP </p>
+                                <p> <i class="fas fa-book"></i>	⠀MySQL / PostgreSQL </p>
+                            </div>
+                            <div class="column">
+                                <progress class="progress is-medium" value="85" max="100">85%</progress>
+                                <progress class="progress is-medium" value="80" max="100">80%</progress>
+                                <progress class="progress is-medium" value="80" max="100">80%</progress>
+                            </div>
+                        </div>
+                        <div class="column columns is-mobile hidden" style="width: 85%; margin-left: auto; margin-right: auto">
+                            <div class="column is-one-quarter-desktop is-half-touch">
+                                <p> <i class="far fa-file"></i>	⠀C++ </p>
+                                <p> <i class="fab fa-java"></i>	⠀Java  </p>
+                                <p> <i class="fab fa-python"></i>	⠀Python </p>
+                            </div>
+                            <div class="column">
+                                <progress class="progress is-medium" value="60" max="100">60%</progress>
+                                <progress class="progress is-medium" value="70" max="100">70%</progress>
+                                <progress class="progress is-medium" value="85" max="100">85%</progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns is-mobile other-skills">
+                        <div class="column"><i class="fab fa-github fa-5x"></i> <br /><br /> <h2 class="subtitle is-3">Outils collaboratifs</h2></div>
+                        <div class="column"><i class="fab fa-adobe fa-5x"></i> <br /><br /> <h2 class="subtitle is-3">Photoshop</h2> </div>
+                        <div class="column"><i class="fas fa-code-branch fa-5x"></i> <br /><br /> <h2 class="subtitle is-3">UML</h2> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projets -->
+        <div class="block" style="margin-bottom: 0px">
+            <div class="projects" id="projects">
+                <h1 class="title is-2">PROJETS⠀<i class="fas fa-project-diagram"></i></h1>
+
+                <div class="tabs is-toggle is-toggle-rounded is-centered is-large">
+                    <ul>
+                        <li class="is-active" id="tabs-all">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-file-alt"></i></span>
+                                <span>Tous</span>
+                            </a>
+                        </li>
+                        <li id="tabs-prog">
+                            <a>
+                                <span class="icon is-small"><i class="far fa-file-code"></i></span>
+                                <span>Programmation</span>
+                            </a>
+                        </li>
+                        <li id="tabs-graph">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-image"></i></span>
+                                <span>Graphisme</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tabs-content-all">
+                    <div class="container">
+                        <div class="columns is-multiline is-mobile is-variable is-1-mobile">
+
+                            <div class="column is-one-third prog">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a class="horizon"><div class="cache"></div>
+                                            <figure class="image is-4by3">
+                                                <img data-src="src/img/horizon/0.png" class="lazyload" alt="Screen projet marathon">
+                                            </figure></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <div class="tags has-addons">
+                                                <span class="tag is-dark"><i class="far fa-file-code"></i></span><span class="tag is-light">PHP</span>
+                                            </div>  <span class="title is-5">Horizon</span> <br />
+                                            <div class="texte">
+                                                Projet marathon - Site de critiques de séries
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column is-one-third prog">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a class="portfolio"><div class="cache"></div>
+                                            <figure class="image is-4by3">
+                                                <img data-src="src/img/portfolio/screen.png" class="lazyload" alt="Screen portfolio jason guestin">
+                                            </figure></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <div class="tags has-addons">
+                                                <span class="tag is-dark"><i class="far fa-file-code"></i></span><span class="tag is-light">HTML5 / CSS3</span>
+                                            </div>
+                                                <span class="title is-5">Jason Guestin v1</span> <br />
+                                            <div class="texte">
+                                                Portfolio "Jason Guestin", réalisé from scratch
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column is-one-third prog">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a class="eggstronaut"><div class="cache"></div>
+                                            <figure class="image is-4by3">
+                                            <img data-src="src/img/eggstronaut/eggstronaut.png" class="lazyload" alt="Screen jeu python eggstronaut">
+                                        </figure></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <div class="tags has-addons">
+                                                <span class="tag is-dark"><i class="far fa-file-code"></i></span><span class="tag is-light">Python</span>
+                                            </div>
+                                                <span class="title is-5">Eggstraunot</span> <br />
+                                            <div class="texte">
+                                                Projet tutoré S2 - Bomberman-like multijoueur
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column is-one-third prog">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a class="gk"><div class="cache"></div>
+                                            <figure class="image is-4by3">
+                                            <img data-src="src/img/gk/screen.png" class="lazyload" alt="Screen site gafomi's klan">
+                                        </figure></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <div class="tags has-addons">
+                                                <span class="tag is-dark"><i class="far fa-file-code"></i></span><span class="tag is-light">HTML5 / CSS3</span>
+                                            </div>
+                                            <span class="title is-5">Gafomi's Klan</span> <br />
+                                                <div class="texte">
+                                                Site responsive statique "Gafomi's Klan"
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column is-one-third graph">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a class="bde"><div class="cache"></div>
+                                            <figure class="image is-4by3">
+                                                <img data-src="src/img/graphisme/BDE/nb.png" class="lazyload" alt="Screen site gafomi's klan">
+                                            </figure></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <div class="tags has-addons">
+                                                <span class="tag is-dark"><i class="far fa-image"></i></span><span class="tag is-white">Photoshop</span>
+                                            </div>
+                                            <span class="title is-5">BDE Info 2019-2020</span> <br />
+                                            <div class="texte">
+                                                Différentes affiches/flyers réalisées en tant que graphiste du BDE Informatique
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column is-one-third prog">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a class="cdin"><div class="cache"></div>
+                                            <figure class="image is-4by3">
+                                                <img data-src="src/img/CDIN/screen.png" class="lazyload" alt="Screen projet CDIN">
+                                            </figure></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <div class="tags has-addons">
+                                                <span class="tag is-dark"><i class="far fa-file-code"></i></span><span class="tag is-light">HTML5 / CSS3</span>
+                                            </div>
+                                                <span class="title is-5">Portail IUT informatique</span> <br />
+                                            <div class="texte">
+                                                Projet tutoré S1 - Site responsive statique "Portail des IUT informatique"
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column is-one-third graph">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <a class="divers"><div class="cache"></div>
+                                            <figure class="image is-4by3">
+                                                <img data-src="src/img/graphisme/divers/logo.png" class="lazyload" alt="Logo divers">
+                                            </figure></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <div class="tags has-addons">
+                                                <span class="tag is-dark"><i class="far fa-image"></i></span><span class="tag is-white">Photoshop</span>
+                                            </div>
+                                            <span class="title is-5">Divers logos/affiches</span> <br />
+                                            <div class="texte">
+                                                Affiches et logos réalisés sur commandes pour divers projets
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal" id="horizon">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title title is-3">Horizon</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="slider slider-horizon">
+                        <div><img data-src="src/img/horizon/1.png" class="lazyload"></div>
+                        <div><img data-src="src/img/horizon/2.png" class="lazyload"></div>
+                        <div><img data-src="src/img/horizon/3.png" class="lazyload"></div>
+                        <div><img data-src="src/img/horizon/4.png" class="lazyload"></div>
+                        <div><img data-src="src/img/horizon/5.png" class="lazyload"></div>
+                        <div><img data-src="src/img/horizon/6.png" class="lazyload"></div>
+                        <div><img data-src="src/img/horizon/7.png" class="lazyload"></div>
+                    </div>
+                    <div>
+                        <p><b>Technologies utilisés :</b> HTML / CSS / JS / PHP ( Avec Laravel ) / MySQL </p>
+                        <p><b>Lien du projet :</b> <a>A venir</a></p>
+                        <p><b>Date :</b> Décembre 2019</p>
+                        <br />
+                        <p><b>Description :</b><br />
+                        Site de critiques de série développé en 2 jours dans le cadre du marathon web 2019 à l'IUT de Lens en collaboration avec des étudiants de DUT MMI. Celui-ci possède un back-end complet.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="modal" id="eggstronaut">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title title is-3">Eggstronaut</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="slider slider-eggstronaut">
+                        <div><img data-src="src/img/eggstronaut/eggstronaut.png" class="lazyload"></div>
+                        <div><img data-src="src/img/eggstronaut/credits.png" class="lazyload"></div>
+                        <div><img data-src="src/img/eggstronaut/screen.png" class="lazyload"></div>
+                        <div><img data-src="src/img/eggstronaut/victoire.png" class="lazyload"></div>
+                    </div>
+                    <div>
+                        <p><b>Technologies utilisés :</b> Python3, PyQt5, MySQL, Photoshop (Pour les sprites/boutons/background) </p>
+                        <p><b>Lien du projet :</b> <a href="https://github.com/jasongst/python-eggstronaut">https://github.com/jasongst/python-eggstronaut</a></p>
+                        <p><b>Nombre de joueurs :</b> 1 à 4 joueurs</p>
+                        <p><b>Date :</b> Mai 2019</p>
+                        <br />
+                        <p><b>Description :</b><br />
+                        Jeu réalisé dans le cadre du projet tutoré de S2 en groupe de 4 étudiants, il reprend les concepts de Bomberman avec le thème de l'espace.<br />Le jeu est multijoueur (En ligne ou avec écran partagé), l'IA des bots n'a pas pu être finalisé à temps.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="modal" id="gk">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title title is-3">Gafomi's Klan</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="slider slider-gk">
+                        <div><img data-src="src/img/gk/screen.png" class="lazyload"></div>
+                        <div><img data-src="src/img/gk/screen1.png" class="lazyload"></div>
+                        <div><img data-src="src/img/gk/screen2.png" class="lazyload"></div>
+                    </div>
+                    <div>
+                        <p><b>Technologies utilisés :</b> HTML5 / CSS3 </p>
+                        <p><b>Lien du projet :</b> <a>XXX</a></p>
+                        <p><b>Date :</b> Avril 2019</p>
+                        <br />
+                        <p><b>Description :</b><br />
+                        Site statique & responsive, réalisé from scratch. Ce site servait de page d'accueil et de redirection pour la communauté multigaming "Gafomi's Klan"</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="modal" id="portfolio">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title title is-3">Jason Guestin v1</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="slider slider-portfolio">
+                        <div><img data-src="src/img/portfolio/screen1.png" class="lazyload"></div>
+                        <div><img data-src="src/img/portfolio/screen2.png" class="lazyload"></div>
+                        <div><img data-src="src/img/portfolio/screen3.png" class="lazyload"></div>
+                        <div><img data-src="src/img/portfolio/screen4.png" class="lazyload"></div>
+                        <div><img data-src="src/img/portfolio/screen5.png" class="lazyload"></div>
+                    </div>
+                    <div>
+                        <p><b>Technologies utilisés :</b> HTML5 / CSS3 / JS (JQuery) / Bulma </p>
+                        <p><b>Lien du site :</b> <a href="http://jason-guestin.me">http://jason-guestin.me</a></p>
+                        <p><b>Date :</b> Novembre 2019</p>
+                        <br />
+                        <p><b>Description :</b><br />
+                            Création de mon site personnel en suivant les tendances actuelles du web. Le site est responsive et réalisé sans CMS ni template (from scratch)</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="modal" id="cdin">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title title is-3">Portail IUT info</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="slider slider-cdin">
+                        <div><img data-src="src/img/CDIN/screen1.png" class="lazyload"></div>
+                        <div><img data-src="src/img/CDIN/screen2.png" class="lazyload"></div>
+                    </div>
+                    <div>
+                        <p><b>Technologies utilisés :</b> HTML5 / CSS3 / Bootstrap</p>
+                        <p><b>Lien du projet :</b> <a>https://github.com/jasongst/CDINs1</a></p>
+                        <p><b>Date :</b> November 2018</p>
+                        <br />
+                        <p><b>Description :</b><br />
+                        Projet tutoré du S1 de 1ère année en DUT Informatique. C'est un des tout premiers sites réalisé et je me rend aujourd'hui compte des faiblesses du projet, il me permet cependant de constater mon évolution depuis mes débuts.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="modal" id="bde">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title title is-3">BDE Info 2019-2020</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <img data-src="src/img/graphisme/BDE/liste.png" class="lazyload">
+                    <img data-src="src/img/graphisme/BDE/logobd.png" class="lazyload">
+                    <img data-src="src/img/graphisme/BDE/afficheSA3.png" class="lazyload">
+                    <img data-src="src/img/graphisme/BDE/afficheangleterre.png" class="lazyload">
+                    <img data-src="src/img/graphisme/BDE/otacos.png" class="lazyload">
+
+                    <br /><br />
+
+                    <div>
+                        <p><b>Technologies utilisés :</b> Photoshop </p>
+                        <p><b>Lien des images :</b> <a>XXX</a></p>
+                        <p><b>Date :</b> 2019</p>
+                        <br />
+                        <p><b>Description :</b><br />
+                            Différentes affiches et flyers réalisés en tant que graphiste du BDE Informatique "BDE Des Fleurs" de l'IUT de Lens.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="modal" id="divers">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title title is-3">Divers logos/affiches</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <img data-src="src/img/graphisme/divers/phnxtri.png" class="lazyload">
+                    <img data-src="src/img/graphisme/divers/logo.png" class="lazyload">
+                    <img data-src="src/img/graphisme/divers/tournoi.png" class="lazyload">
+                    <img data-src="src/img/graphisme/divers/banniere.png" class="lazyload">
+
+                    <br /><br />
+
+                    <div>
+                        <p><b>Technologies utilisés :</b> Photoshop </p>
+                        <p><b>Lien des images :</b> <a>XXX</a></p>
+                        <p><b>Date :</b> 2017-2018</p>
+                        <br />
+                        <p><b>Description :</b><br />
+                            Différentes affiches et logos réalisés sur commande dans le cadre de divers projets.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- CV -->
+        <div class="block" style="margin-bottom: 0px">
+            <div class="cv">
+                <div class="fond"><div class="hidden">
+                    <h1 class="title">Mon profil vous intéresse ?</h1>
+                    <div class="underline"></div>
+                    <a href="CV_GuestinJason.pdf" target="_blank"><button class="button is-dark is-size-5-desktop is size-4-touch"><i class="fas fa-id-card"></i> 	⠀Voir mon C.V</button></a>
+                </div></div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="block" style="margin-bottom: 0px">
+            <div class="contact" id="contact">
+                <h1 class="title is-2">CONTACT⠀<i class="fas fa-envelope-open-text"></i></h1>
+
+                <div class="container">
+                    <div class="columns is-desktop" style="margin-bottom: 10px">
+                        <div class="column is-one-quarter-desktop is-full-touch" style="margin: auto">
+                                <div class="columns is-mobile">
+                                    <div class="column is-one-fifth-desktop is-one-third-touch has-text-right">
+                                        <i class="fas fa-map-marked fa-2x"></i>
+                                    </div>
+                                    <div class="column is-size-6-desktop is-size-4-touch has-text-left">
+                                        <b>ADRESSE</b> <br />
+                                        <span>France - 62160, Bully-les-mines</span>
+                                    </div>	⠀
+                                </div>
+                                <br />
+                                <div class="columns is-mobile">
+                                    <div class="column is-one-fifth-desktop is-one-third-touch has-text-right">
+                                        <i class="fas fa-phone-alt fa-2x"></i>
+                                    </div>
+                                    <div class="column is-size-6-desktop is-size-4-touch has-text-left">
+                                        <b>TÉLÉPHONE</b> <br />
+                                        <span>+33 7 88 78 71 75</span>
+                                    </div>	⠀
+                                </div>
+                                <br />
+                                <div class="columns is-mobile">
+                                    <div class="column is-one-fifth-desktop is-one-third-touch has-text-right">
+                                        <i class="fas fa-at fa-2x"></i>
+                                    </div>
+                                    <div class="column is-size-6-desktop is-size-4-touch has-text-left">
+                                        <b>E-MAIL</b> <br />
+                                        <span>jasonguestin@gmail.com</span>
+                                    </div>	⠀
+                                </div>
+                        </div>
+                        <div class="column hidden">
+                            <div id="mapid"></div>
+                        </div>
+                        <div class="column">
+                            <div class="formulaire">
+                                <div class="notification is-success">
+                                    <button class="delete"></button>
+                                    Message envoyé avec succès.
+                                </div>
+                                <div class="notification is-danger">
+                                    <button class="delete"></button>
+                                    L'envoi du message à échoué, veuillez réessayer ultérieurement.
+                                </div>
+                                <div class="contact-form">
+                                    <form action="https://getform.io/f/c2c16b02-4085-4d32-8a6b-c96b2aa1a777" method="POST">
+                                    <div class="field">
+                                        <div class="field-label"></div>
+                                        <div class="field-body">
+                                            <div class="field is-expanded">
+                                                <div class="field has-addons">
+                                                    <p class="control">
+                                                        <a class="button is-static is-medium">
+                                                            <i class="fas fa-user"></i>
+                                                        </a>
+                                                    </p>
+                                                    <p class="control is-expanded">
+                                                        <input id="name" class="input is-medium" type="text" placeholder="Nom / Prénom" name="name">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="field-label"></div>
+                                        <div class="field-body">
+                                            <div class="field is-expanded">
+                                                <div class="field has-addons">
+                                                    <p class="control">
+                                                        <a class="button is-static is-medium">
+                                                            <i class="fas fa-phone-alt"></i>
+                                                        </a>
+                                                    </p>
+                                                    <p class="control is-expanded">
+                                                        <input id="tel" class="input is-medium" type="tel" placeholder="Téléphone" name="tel">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="field-label"></div>
+                                        <div class="field-body">
+                                            <div class="field is-expanded">
+                                                <div class="field has-addons">
+                                                    <p class="control">
+                                                        <a class="button is-static is-medium">
+                                                            <i class="fas fa-at"></i>
+                                                        </a>
+                                                    </p>
+                                                    <p class="control is-expanded">
+                                                        <input id="email" class="input is-medium" type="email" placeholder="E-mail" name="email">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="field">
+                                        <div class="control">
+                                            <textarea id="message" class="textarea" placeholder="Message" name="message"></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <div class="field lock">
+                                        <div class="field-label"></div>
+                                        <div class="field-body">
+                                            <div class="field is-expanded">
+                                                <div class="field has-addons">
+                                                    <p class="control">
+                                                        <a class="button is-static is-medium">
+                                                            <i class="fas fa-unlock"></i>
+                                                        </a>
+                                                    </p>
+                                                    <p class="control is-expanded">
+                                                        <input id="verif" class="input is-medium" type="number" placeholder="Combien font 27 + 2?" name="verif">
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <br /><br />
+                                    <div class="field is-grouped">
+                                        <div class="control">
+                                            <button class="button is-medium is-dark" id="send_email">Envoyer</button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="block" style="margin-bottom: 0px">
+            <footer>
+                <div class="test">
+                    <div class="container">
+                        <div class="columns is-mobile">
+                            <div class="column is-one-fifth footer-image">
+                                <img src="src/img/logoblanc.png">
+                            </div>
+                            <div class="column footer-content">
+                                <p class="is-size-6">© Jason Guestin - Tous droits réservés</p>
+                            </div>
+                            <div class="column is-one-fifth footer-button">
+                                <a href="#"><button class="button is-light">
+                                        <span class="icon">
+                                          <i class="fas fa-angle-up"></i>
+                                        </span>
+                                </button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="src/js/script.js"></script>
+        <script src="https://kit.fontawesome.com/d70eda5bb9.js" crossorigin="anonymous"></script>
+        <script src="src/js/core.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+                integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+                crossorigin=""></script>
+        <script src="src/js/map.js"></script>
+
+    </body>
+</html>
